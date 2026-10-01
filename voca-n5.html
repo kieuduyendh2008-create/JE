@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Từ vựng N5 - JE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Danh sách Từ vựng JLPT N5</h1>
+  <p><a href="index.html">← Quay lại trang chủ</a></p>
+
+  <p>Dưới đây là một số từ vựng JLPT N5 cơ bản. Hãy bấm vào nút "Xem nghĩa" để kiểm tra trí nhớ nhé!</p>
+
+  <table class="vocab-table">
+    <thead>
+      <tr>
+        <th>Từ vựng (Kanji/Kana)</th>
+        <th>Cách đọc (Romaji)</th>
+        <th>Nghĩa tiếng Việt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>私 (わたし)</td>
+        <td>Watashi</td>
+        <td><button onclick="toggleMeaning(this, 'Tôi')">Xem nghĩa</button></td>
+      </tr>
+      <tr>
+        <td>学生 (がくせい)</td>
+        <td>Gakusei</td>
+        <td><button onclick="toggleMeaning(this, 'Học sinh, sinh viên')">Xem nghĩa</button></td>
+      </tr>
+      <tr>
+        <td>先生 (せんせい)</td>
+        <td>Sensei</td>
+        <td><button onclick="toggleMeaning(this, 'Giáo viên, thầy cô')">Xem nghĩa</button></td>
+      </tr>
+      <tr>
+        <td>食べる (たべる)</td>
+        <td>Taberu</td>
+        <td><button onclick="toggleMeaning(this, 'Ăn')">Xem nghĩa</button></td>
+      </tr>
+      <tr>
+        <td>飲む (のむ)</td>
+        <td>Nomu</td>
+        <td><button onclick="toggleMeaning(this, 'Uống')">Xem nghĩa</button></td>
+      </tr>
+      <tr>
+        <td>本 (ほん)</td>
+        <td>Hon</td>
+        <td><button onclick="toggleMeaning(this, 'Sách')">Xem nghĩa</button></td>
+      </tr>
+      <tr>
+        <td>日本 (にほん)</td>
+        <td>Nihon</td>
+        <td><button onclick="toggleMeaning(this, 'Nhật Bản')">Xem nghĩa</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function toggleMeaning(btn, text) {
+      if (btn.innerText === "Xem nghĩa") {
+        btn.innerText = text;
+        btn.style.backgroundColor = "#e8f5e9";
+        btn.style.color = "#2e7d32";
+      } else {
+        btn.innerText = "Xem nghĩa";
+        btn.style.backgroundColor = "";
+        btn.style.color = "";
+      }
+    }
+  </script>
+</body>
+</html>
