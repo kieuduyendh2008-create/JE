@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trắc nghiệm tiếng Nhật - JE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bài tập Trắc nghiệm N5</h1>
+  <p><a href="index.html">← Quay lại trang chủ</a></p>
+
+  <div class="quiz-box">
+    <h3>Câu 1: Chữ Katakana "アメリカ" đọc là gì?</h3>
+    <div class="options">
+      <button onclick="checkQuiz(1, false, this)">A. Afrika</button>
+      <button onclick="checkQuiz(1, true, this)">B. America</button>
+      <button onclick="checkQuiz(1, false, this)">C. Australia</button>
+    </div>
+    <p id="res-1" class="quiz-result"></p>
+  </div>
+
+  <div class="quiz-box">
+    <h3>Câu 2: "Trường học" trong tiếng Nhật là gì?</h3>
+    <div class="options">
+      <button onclick="checkQuiz(2, true, this)">A. がっこう (Gakkou)</button>
+      <button onclick="checkQuiz(2, false, this)">B. べんきょう (Benkyou)</button>
+      <button onclick="checkQuiz(2, false, this)">C. いえ (Ie)</button>
+    </div>
+    <p id="res-2" class="quiz-result"></p>
+  </div>
+
+  <div class="quiz-box">
+    <h3>Câu 3: Chữ Hiragana "ありがとう" có nghĩa là gì?</h3>
+    <div class="options">
+      <button onclick="checkQuiz(3, false, this)">A. Xin chào</button>
+      <button onclick="checkQuiz(3, false, this)">B. Tạm biệt</button>
+      <button onclick="checkQuiz(3, true, this)">C. Cảm ơn</button>
+    </div>
+    <p id="res-3" class="quiz-result"></p>
+  </div>
+
+  <script>
+    function checkQuiz(questionNum, isCorrect, btnElement) {
+      const resultText = document.getElementById(`res-${questionNum}`);
+      const parent = btnElement.parentElement;
+      const buttons = parent.querySelectorAll('button');
+
+      // Khóa các nút chọn sau khi đã bấm
+      buttons.forEach(b => b.disabled = true);
+
+      if (isCorrect) {
+        btnElement.style.backgroundColor = "#4caf50";
+        btnElement.style.color = "#fff";
+        resultText.innerText = "Chính xác! 🎉";
+        resultText.style.color = "#2e7d32";
+      } else {
+        btnElement.style.backgroundColor = "#f44336";
+        btnElement.style.color = "#fff";
+        resultText.innerText = "Chưa đúng rồi! ❌";
+        resultText.style.color = "#c62828";
+      }
+    }
+  </script>
+</body>
+</html>
