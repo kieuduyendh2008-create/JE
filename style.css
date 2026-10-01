@@ -1,0 +1,225 @@
+/* ==========================================
+   1. CẤU HÌNH CHUNG (GENERAL STYLES)
+   ========================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #2b2d42;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Đường dẫn quay lại trang chủ */
+a {
+  color: #457b9d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1d3557;
+  text-decoration: underline;
+}
+
+/* Tiêu đề trang */
+h1 {
+  color: #e63946;
+  text-align: center;
+  border-bottom: 3px solid #e63946;
+  padding-bottom: 12px;
+  margin-top: 10px;
+}
+
+h2 {
+  color: #1d3557;
+  margin-top: 30px;
+}
+
+
+/* ==========================================
+   2. DANH SÁCH BÀI HỌC Ở TRANG CHỦ (INDEX)
+   ========================================== */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #ffffff;
+  margin: 12px 0;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border-left: 5px solid #e63946;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+ul li a {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+
+
+/* ==========================================
+   3. BẢNG THẺ CHỮ KATAKANA / HIRAGANA
+   ========================================== */
+.kana-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 15px 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e9ecef;
+}
+
+.card strong {
+  font-size: 26px;
+  color: #d62828;
+}
+
+.card span {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+
+/* ==========================================
+   4. BẢNG TỪ VỰNG N5 (VOCABULARY TABLE)
+   ========================================== */
+.vocab-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.vocab-table th, 
+.vocab-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.vocab-table th {
+  background-color: #1d3557;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.vocab-table tr:last-child td {
+  border-bottom: none;
+}
+
+.vocab-table button {
+  padding: 8px 14px;
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.vocab-table button:hover {
+  background-color: #e9ecef;
+}
+
+
+/* ==========================================
+   5. BÀI TẬP TRẮC NGHIỆM (QUIZ)
+   ========================================== */
+.quiz-box {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+.quiz-box h3 {
+  margin-top: 0;
+  color: #1d3557;
+}
+
+.options button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.options button:hover:not([disabled]) {
+  background-color: #e2e6ea;
+  border-color: #adb5bd;
+}
+
+.quiz-result {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+
+/* ==========================================
+   6. TỐI ƯU GIAO DIỆN ĐIỆN THOẠI (RESPONSIVE)
+   ========================================== */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .kana-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 8px;
+  }
+
+  .card strong {
+    font-size: 20px;
+  }
+
+  .vocab-table th, 
+  .vocab-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
